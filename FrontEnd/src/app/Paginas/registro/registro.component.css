@@ -1,0 +1,112 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+article {
+    font-family: "Roboto", sans-serif;
+    opacity: 0.8;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    min-height: 100vh;
+}
+
+.form{
+    background-color: white;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 95%);
+    text-align: center;
+}
+
+.formTitle{ 
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+.formP{
+    font-weight: 300;
+}
+
+.fomrLink{
+    font-weight: 400;
+    color: black;
+}
+
+.formContainer{
+    margin-top: 3em;
+    display: grid;
+    gap: 2rem;
+}
+
+.formGroup{
+    position: relative;
+    color: black;
+}
+
+.formInput{
+    width: 100%;
+    background: none;
+    color: #908f8e;
+    font-size: 1rem;
+    padding: .6rem .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+}
+
+.formInput:not(:placeholder-shown) + .fomrLabel{
+    color: #4d4646;
+}
+
+.formInput:focus + .fomrLabel,
+.formInput:not(:placeholder-shown) + .fomrLabel{
+    transform: translateY(-1px) scale(.7);
+    transform-origin: left top;
+    color: #3866f2;
+}
+
+.fomrLabel{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(18px);
+    transition: transform .6s, color .4s;
+}
+
+.formSubmit{
+    background: #444444;
+    color: white;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+}
+
+.formLine{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #3866f2;
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .5s;
+}
+
+.formInput:focus + .fomrLabel,
+.formInput:not(:placeholder-shown) + .fomrLabel{
+    transform: scale(.7);
+}

@@ -1,1 +1,22 @@
-<p>login works!</p>
+<main class="container mt-5 ms-auto text-center bg-secondary p-5 rounded">
+    <h2> INCIO DE SESIÓN</h2>
+
+    
+    <form [formGroup]="formularioLogin" (ngSubmit)="handleSubmint()">               
+        <div class="mb-3 text-start">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+
+        
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" formControlName="email">
+
+            <div id="emailHelp" class="form-text">No compartiremos tu correo con nadie</div>
+        </div>
+        <div class="mb-3 text-start">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password" formControlName="password">
+        </div>
+        <button type="submit" class="btn btn-dark">Iniciar Sesión</button>
+        <p class="formP">¿Ya cuentas con una cuenta ? <a routerLink ="/"  class="formLink">Ingresa aquí</a>
+    </form>
+
+</main>
